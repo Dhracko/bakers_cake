@@ -60,6 +60,11 @@ body {
     color: white;
 }
 
+.bg-banner {
+    background: rgb(79, 45, 83) !important;
+    color: white;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
