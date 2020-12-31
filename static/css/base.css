@@ -52,7 +52,10 @@ body {
 .shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
-.btn-black:focus {
+.btn-black:focus,
+.dropdown-item:hover,
+.dropdown-item:active, 
+.dropdown-item:focus {
     background: rgb(79, 45, 83);
     color: white;
 }
