@@ -88,3 +88,28 @@ body {
         padding-top: 164px;
     }
 }
+
+/* padding the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 134px;
+    }
+
+    body {
+        height: calc(100vh - 140px);
+    }
+
+    .display-4 {
+    font-size: 3rem;
+    }
+}
+
+@media (max-width: 310px){
+    .header-container {
+        padding-top: 190px;
+    }
+
+    .display-4 {
+    font-size: 2rem;
+    }
+}
