@@ -10,6 +10,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.wrap-content {
+  padding-bottom: 1.5rem;
+}
+
 .hero-font {
     font-family: 'Dancing Script', cursive;
 }
@@ -64,6 +68,19 @@ body {
     background: rgb(79, 45, 83) !important;
     color: white;
 }
+
+.email-form {
+    width: 80%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: -webkit-fill-available;
+    height: auto;
+}
+
+
 
 /* -------------------------------- Media Queries */
 
