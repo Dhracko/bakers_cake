@@ -1,0 +1,268 @@
+[
+  {
+    "pk": 1,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000155",
+      "name": "Unicorn Cupcakes",
+      "description": "Chocolate cupcakes sponge decorated with a tri-color buttercream flavoured with strawberry, vanilla and mint. Topped with a golden icing sugar horn shaped and two ears shaped icing.",
+      "price": 1.75,
+      "category": 8,
+      "rating": 4.6,
+      "image_url": "",
+      "image": "001.png"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000156",
+      "name": "First Birthday",
+      "description": "This is a fruit cake covered with royal icing and decorated with royal fondant",
+      "price": 35.99,
+      "category": 6,
+      "rating": 3.5,
+      "image_url": "",
+      "image": "1_bday.png"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000157",
+      "name": "Cupcakes",
+      "description": "Plain vanilla cupcakes decorated to the client needs with butter cream, either flavoured or just plain vanilla. Please contact us for any special requirements.",
+      "price": 1.75,
+      "category": 4,
+      "rating": 4.5,
+      "image_url": "",
+      "image": "002.png"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000158",
+      "name": "Spring Cake",
+      "description": "Special cake consisting in a plain victoria sponge with butter cream and topped with fresh seasonal fruits.",
+      "price": 25.75,
+      "category": 1,
+      "rating": 4.3,
+      "image_url": "",
+      "image": "003.png"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000159",
+      "name": "18th Birthday",
+      "description": "Plain sponge cake decorated with rolled icing and a red ribbon. Decoration on top with a sport theme.",
+      "price": 45.99,
+      "category": 6,
+      "rating": 4.1,
+      "image_url": "",
+      "image": "004.png"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000160",
+      "name": "Purple Wedding",
+      "description": "Rich fruit cake, decorated with mazipan and outlayer of purple royal icing. Sugar flowers on top made with icing paste.",
+      "price": 65.50,
+      "category": 2,
+      "rating": 4.8,
+      "image_url": "",
+      "image": "005.png"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000161",
+      "name": "JackDaniels Cupcakes",
+      "description": "This particular cupcakes have a hint of JackDaniels in both the sponge and in the buttercream ",
+      "price": 2.75,
+      "category": 4,
+      "rating": 4.2,
+      "image_url": "",
+      "image": "006.png"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000162",
+      "name": "6th Birthday",
+      "description": "This vanilla sponge, covered with rolled pink rolled icing and decorated with butterflies, ideal for a 6 years old little girl.",
+      "price": 27.50,
+      "category": 6,
+      "rating": 4.0,
+      "image_url": "",
+      "image": "6_bday.png"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000163",
+      "name": "Hecho a Mano",
+      "description": "Two shortbread biscuits sandwich with a layer of chocolate ganache and topped with royal icing with the letter on top 'HECHO A MANO' (homemade)",
+      "price": 3.75,
+      "category": 7,
+      "rating": 4.7,
+      "image_url": "",
+      "image": "007.png"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000164",
+      "name": "Oreo Birthday",
+      "description": "Sponge cake with broken pieces of oreo biscuits, with layers of buttercream and decorated on the outside with vanilla buttercream and dripping effect of dark chocolate. Topped with oreo biscuits and a banner saying happy birthday.",
+      "price": 55.99,
+      "category": 6,
+      "rating": 4.0,
+      "image_url": "",
+      "image": "009.png"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000165",
+      "name": "18th American",
+      "description": "Chocolate sponge decorated with red rolled icing and on an American theme.",
+      "price": 25.85,
+      "category": 6,
+      "rating": 3.9,
+      "image_url": "",
+      "image": "18_bday.png"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000166",
+      "name": "Star Wars Wedding",
+      "description": "3 tiers of slow cooked rich fruit cake with mazipan and apricot jam, covered with rolled icing and decorated with a purple ribbon and a string of edible ivy leaves climbing arounf the cake. Top finalise it, it has Disney Star Wars figures around the cake.",
+      "price": 125.99,
+      "category": 5,
+      "rating": 4.9,
+      "image_url": "",
+      "image": "wedding.png"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000167",
+      "name": "40th Birthday",
+      "description": "A fruit cake, covered with rolled icing and decorated on top with a 3D effect of 40 and a blue ribbon",
+      "price": 35.65,
+      "category": 6,
+      "rating": 3.1,
+      "image_url": "",
+      "image": "40_bday.png"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000168",
+      "name": "60th Birthday",
+      "description": "Traditional fruit cake covered with rolled icing and decorated on an England theme flag style with white and red and delicate royal icing runnouts on each conner",
+      "price": 75.99,
+      "category": 6,
+      "rating": 4.5,
+      "image_url": "",
+      "image": "60_bday.png"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000169",
+      "name": "Death by Chocolate",
+      "description": "A decadence of chocolate. Rich chocolate sponge with layers of dark chocolate ganache and covered with chocolate buttercream, topped with dark chocolate to provide a side dripping effect. And finalised with chocolate sprinkles",
+      "price": 41.90,
+      "category": 1,
+      "rating": 5,
+      "image_url": "",
+      "image": "choco.png"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000170",
+      "name": "Cheesecake",
+      "description": "Vanilla and orange cheesecake, on a base of thin sponge and decorated on top with a 2 colours style, white and orange, little meringues to separate the sides.",
+      "price": 14.85,
+      "category": 3,
+      "rating": 4.0,
+      "image_url": "",
+      "image": "unbaked.png"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000171",
+      "name": "Heart",
+      "description": "This all heart red velvet sponge cake decorated outside with rolled icing and icing sugar to represent those veins and blood style. Perfect for those halloween occasions",
+      "price": 43.95,
+      "category": 8,
+      "rating": 4.6,
+      "image_url": "",
+      "image": "heart.png"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000172",
+      "name": "Mothers Day",
+      "description": "Rich fruit cake, with a later of mazipan, and covered with royal icing, and delicate decorated with silver and yellow flowers , a stencil of royal icing crown on top. Because mum deserve the best!",
+      "price": 75.25,
+      "category": 7,
+      "rating": 4.4,
+      "image_url": "",
+      "image": "mum.png"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.cake",
+    "fields": {
+      "sku": "pc5000173",
+      "name": "Christmas Cake",
+      "description": "Fruit cake with mazipan and decorated on a traditional style to represent an open book with 7 handmade dwarves and mazipan fruit shape style",
+      "price": 46.75,
+      "category": 8,
+      "rating": 4.1,
+      "image_url": "",
+      "image": "xmas_cake.png"
+    }
+  }  
+]

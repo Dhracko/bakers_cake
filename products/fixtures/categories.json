@@ -1,0 +1,66 @@
+[
+  {
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "sponge",
+      "friendly_name": "Sponge"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "fruit",
+      "friendly_name": "Fruit Cake"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "cheesecake",
+      "friendly_name": "Cheesecake"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+      "name": "cupcake",
+      "friendly_name": "Cupcake"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+      "name": "wedding",
+      "friendly_name": "Wedding"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+      "name": "birthday",
+      "friendly_name": "Birthday"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "anniversary",
+      "friendly_name": "Anniversary"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.category",
+    "fields": {
+      "name": "special",
+      "friendly_name": "Special Occasion"
+    }
+  }
+]
