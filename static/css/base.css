@@ -74,13 +74,30 @@ body {
 }
 
 footer {
-    position: fixed;
+    position: inherit;
     bottom: 0;
     width: -webkit-fill-available;
     height: auto;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+}
 
+.card-color {
+    background: #D8C7FF;
+    color: #05182A;
+}
+
+.card-footer {
+    background: rgb(79, 45, 83) !important;
+    color: white;
+}
 
 /* -------------------------------- Media Queries */
 
