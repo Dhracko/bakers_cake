@@ -13,6 +13,7 @@ body {
     flex-direction: column;
 }
 
+/* make the footer stay at the bottom  */
 .wrap-container {
   padding-bottom: 2.5rem;
   flex: 1;
@@ -41,7 +42,6 @@ body {
 
 .text-dark-blue {
     color:  #05182A !important;
-
 }
 
 .main-logo-link {
