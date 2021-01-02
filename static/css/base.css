@@ -6,12 +6,20 @@ body {
     background: url('/media/background.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 200px);
+    min-height: 100vh;
     color: #555;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
-.wrap-content {
-  padding-bottom: 1.5rem;
+.wrap-container {
+  padding-bottom: 2.5rem;
+  flex: 1;
+}
+
+.h-90 {
+    height: 90% !important;
 }
 
 .hero-font {
@@ -73,7 +81,7 @@ body {
     width: 80%;
 }
 
-footer {
+.footer-bg {
     position: inherit;
     bottom: 0;
     width: -webkit-fill-available;

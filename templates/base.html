@@ -35,7 +35,9 @@
     <title>Bakers Cake {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
+    <div class="wrap-container">
+
+        <header class="container-fluid fixed-top">
         <div id="topnav" class="row hd-bg-color pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -71,9 +73,9 @@
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                        £{{ grand_total|floatformat:2 }}
                                     {% else %}
-                                        $0.00
+                                        £0.00
                                     {% endif %}
                                 </p>
                             </div>
@@ -92,41 +94,44 @@
             </nav>
         </div>
         <div id="delivery-banner" class="row text-center">
-            <div class="col bg-banner text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }} and Click & Collect!</h4>                
+            <div class="col bg-banner">
+                <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }} or Click & Collect!</h4>                
             </div>            
         </div>        
-    </header>
+        </header>
 
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
+        {% if messages %}
+            <div class="message-container"></div>
+        {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
-      <div class="wrap-content">
-        {% block content %} {% endblock %}
-      </div>
+        {% block content %}
+         {% endblock %}
+
+    </div>
+
 
     <footer>
-        <div class="row hd-bg-color pt-lg-2  d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto d-none d-lg-block py-1 py-lg-0  text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h5 class="text-dark-blue my-0">Bakers Cake</h5>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-center">
-                <p class="text-dark-blue my-0">Bakers Cake @ Frankie Palomo 2021</p>
-            </div>
-            <div class="col-12 col-lg-4 my-auto d-none d-lg-block py-1 py-lg-0 text-center text-lg-left">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control email-form" id="exampleFormControlInput1" placeholder="name@example.com">
+        <div class="container-fluid footer-bg">
+            <div class="row hd-bg-color pt-lg-2 d-lg-flex">
+                <div class="col-12 col-lg-4 my-auto d-none d-lg-block py-1 py-lg-0  text-center text-lg-left">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <h5 class="text-dark-blue my-0">Bakers Cake</h5>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-center">
+                    <p class="text-dark-blue my-0">Bakers Cake @ Frankie Palomo 2021</p>
+                </div>
+                <div class="col-12 col-lg-4 my-auto d-none d-lg-block py-1 py-lg-0 text-center text-lg-left">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control email-form" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
                 </div>
             </div>
         </div>
-        
     </footer>
 
     {% block postloadjs %}
