@@ -146,6 +146,7 @@ body {
     }
 }
 
+/* Padding and font-size for Galaxy Fold compativility */
 @media (max-width: 310px){
     .header-container {
         padding-top: 190px;
