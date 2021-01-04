@@ -17,10 +17,10 @@
                 CATEGORIES
             </a>
             <div class="hd-bg-color dropdown-menu border-0" aria-labelledby="categories-link">
-                <a href="" class="dropdown-item">Sponge</a>
-                <a href="" class="dropdown-item">Fruit</a>
-                <a href="" class="dropdown-item">Cheesecake</a>
-                <a href="" class="dropdown-item">Cupcakes</a>
+                <a href="{% url 'products' %}?category=sponge" class="dropdown-item">Sponge</a>
+                <a href="{% url 'products' %}?category=fruit" class="dropdown-item">Fruit</a>
+                <a href="{% url 'products' %}?category=cheesecake" class="dropdown-item">Cheesecake</a>
+                <a href="{% url 'products' %}?category=cupcake" class="dropdown-item">Cupcakes</a>
             </div>
         </li>
 
@@ -29,10 +29,10 @@
                 OCCASIONS
             </a>
             <div class="hd-bg-color dropdown-menu border-0" aria-labelledby="occasions-link">
-                <a href="" class="dropdown-item">Wedding</a>
-                <a href="" class="dropdown-item">Birthday</a>
-                <a href="" class="dropdown-item">Anniversary</a>
-                <a href="" class="dropdown-item">Special &amp; Occasions</a>
+                <a href="{% url 'products' %}?category=wedding" class="dropdown-item">Wedding</a>
+                <a href="{% url 'products' %}?category=birthday" class="dropdown-item">Birthday</a>
+                <a href="{% url 'products' %}?category=anniversary" class="dropdown-item">Anniversary</a>
+                <a href="{% url 'products' %}?category=special,occasions" class="dropdown-item">Special Occasions</a>
             </div>
         </li>
 
