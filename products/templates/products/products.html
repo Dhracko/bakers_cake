@@ -14,7 +14,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font">Cakes</h2>
+                {% for c in current_categories %}
+                    <h2 class="logo-font">{{ c.friendly_name }}</h2>
+                {% endfor %}
                 <hr class="w-50 mb-1">
             </div>
         </div>
@@ -53,7 +55,7 @@
                                             {% if product.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-light" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                    <i class="fas fa-birthday-cake mr-1"></i>{{ product.category.friendly_name }}
                                                 </a>
                                             </p>
                                             {% endif %}
