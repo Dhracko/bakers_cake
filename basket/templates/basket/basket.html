@@ -21,14 +21,14 @@
 
         <div class="row">
             <div class="col">
-                {% if bag_items %}
+                {% if basket_items %}
                     <div class="table-responsive rounded"></div>
                 {% else %}
                 <div class="col">
                     <p class="lead mb-5">Your basket is empty.</p>
                 </div>
                 <div class="col offset-md-8">
-                    <a href="{% url 'products' %}" class="btn btn-outline-black shop-now-button btn-lg rounded py-3">
+                    <a href="{% url 'products' %}" class="btn shop-now-button btn-lg rounded py-3">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>

@@ -55,7 +55,7 @@ body {
 }
 
 .btn-black {
-    background: black;
+    background: #05182A;
     color: white;
 }
 
@@ -105,6 +105,15 @@ body {
 .card-footer {
     background: rgb(79, 45, 83) !important;
     color: white;
+}
+
+/* Cake details Page */
+.qty_right {
+    text-align: right;
+}
+
+.w-30 {
+    width: 30% !important;
 }
 
 /* -------------------------------- Media Queries */

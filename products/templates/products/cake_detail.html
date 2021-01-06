@@ -32,7 +32,7 @@
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                            <i class="fas fa-birthday-cake mr-1"></i>{{ product.category.friendly_name }}
                         </a>
                     </p>
                     {% endif %}
@@ -42,6 +42,28 @@
                         <small class="text-muted">No Rating</small>
                     {% endif %}
                     <p class="mt-3">{{ product.description }}</p>
+
+                    <!-- Basket Form -->
+                    <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <div class="form-group w-25">
+                                    <div class="input-group">
+                                        <input class="form-control qty_right" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 no-gutters">
+                                <div class="d-grid gap-2 col-4">
+                                    <input type="submit" class="btn btn-lg btn-black rounded text-uppercase" value="Add to Basket">
+                                </div>
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
