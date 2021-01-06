@@ -1,5 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from products.models import Product
 
 
 def basket_contents(request):
@@ -7,7 +9,19 @@ def basket_contents(request):
     basket_items = []
     total = 0
     product_count = 0
+    basket = request.session.get('basket', {})
     # free_delivery_collection = settings.FREE_DELIVERY_COLLECTION
+
+    for item_id, quantity in basket.items():
+        product = get_object_or_404(Product, pk=item_id)
+        total += quantity * product.price
+        product_count += quantity
+        basket_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+        })
+
 
     # Calculate the cost of delivery and it's free if it past the threshold
     if total < settings.FREE_DELIVERY_THRESHOLD:
@@ -26,7 +40,7 @@ def basket_contents(request):
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        # 'free_delivery_collection': settings.FREE_DELIVERY_COLLECTION,
+        'free_delivery_collection': settings.FREE_DELIVERY_COLLECTION,
         'grand_total': grand_total,
     }
 
