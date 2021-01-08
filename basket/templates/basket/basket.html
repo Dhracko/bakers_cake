@@ -11,32 +11,76 @@
 
 {% block content %}
  <div class="container mb-2">
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">Shopping Basket</h2>
-                <hr>
-            </div>
+    <div class="row">
+        <div class="col">
+            <h2 class="logo-font mb-4 mt-5">Your Basket</h2>
+            <hr>
         </div>
-
-        <div class="row">
-            <div class="col">
-                {% if basket_items %}
-                    <div class="table-responsive rounded"></div>
-                {% else %}
-                <div class="col">
-                    <p class="lead mb-5">Your basket is empty.</p>
+    </div>
+    
+    {% if basket_items %}
+        <div class="row mt-4">
+            <div class="col-sm-12 col-lg-12 col-xl-8  wrp">              
+                {% for item in basket_items %}                   
+                <div class="row mb-4 pt-3">
+                    <div class="col-0 col-sm-2">
+                        <img class="img-basket rounded" src="{{ item.product.image.url }}">
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-4 text-center">
+                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <p class="my-0">£{{ item.product.price }}</p>
+                            </div>
+                            <div class="col-4">
+                                <input class="w-50 form-control" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <a href=""><small>Update</small></a>
+                                <a href=""><small>Remove</small></a>
+                            </div>                           
+                        </div>
+                    </div>
                 </div>
-                <div class="col offset-md-8">
-                    <a href="{% url 'products' %}" class="btn shop-now-button btn-lg rounded py-3">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                </div>
-                {% endif %}
+                <hr>
+                {% endfor %}
             </div>
+            <div class="col-sm-12 col-lg-12 col-xl-4 py-4 text-right">
+                    <div class="text-right text-dark-blue">
+                        <h6><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
+                        <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                        <h4 class="mt-4"><strong>Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                        {% if free_delivery_delta > 0 %}
+                        <p class="mb-1 text-danger">
+                            You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
         </div>
-    </div>    
+        
+                                 
+        <div class="col text-right">
+        <a href="" class="btn btn-black rounded btn-lg">
+            <span class="text-uppercase">Proceed To Delivery  </span>
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>                       
+        
+    {% else %}
+        <div class="col">
+            <p class="lead mb-5">Your basket is empty.</p>
+        </div>
+        <div class="col offset-md-8">
+            <a href="{% url 'products' %}" class="btn shop-now-button btn-lg rounded py-3">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+        </div>
+    {% endif %}
+    
+</div>   
 {% endblock %}
