@@ -28,38 +28,46 @@
                     </div>
                     <div class="col-10">
                         <div class="row">
+                            <!-- Cake name -->
                             <div class="col-6 col-sm-4 mt-3 text-center">
                                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                 <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                             </div>
-
+                            
+                            <!-- Price -->
                             <div class="col-6 col-sm-4 mt-3 text-center">
                                 <p><strong>Price:</strong></p>
                                 <p>£{{ item.product.price }}</p>
                             </div>
 
+                            <!-- Quantity -->
                             <div class="col-12 col-sm-4 mt-3">
-                                <p><strong>Quantity:</strong></p>
-                                <div class="form-group qty-width">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-black btn-sm rounded" 
-                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                                <i class="fas fa-minus"></i>
-                                            </button>
+                                <form class="form update-form" method="POST" action="{% url 'adjust_basket' item.item_id %}">
+                                    {% csrf_token %}
+                                    <p><strong>Quantity:</strong></p>
+                                    <div class="form-group qty-width">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-black btn-sm rounded" 
+                                                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                    <i class="fas fa-minus fa-sm"></i>
+                                                </button>
+                                            </div>
+                                            <input class="form-control qty_input" type="number"
+                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                    data-item_id="{{ item.item_id }}"
+                                                    id="id_qty_{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-black btn-sm rounded"
+                                                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                    <i class="fas fa-plus fa-sm"></i>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <input class="form-control qty_input" type="number"
-                                                name="quantity" value="1" min="1" max="99"
-                                                data-item_id="{{ product.id }}"
-                                                id="id_qty_{{ product.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-black btn-sm rounded"
-                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                                <i class="fas fa-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+                                    </div>                                    
+                                </form>
+                                <a class="update-qty text-info"><small>Update</small></a>
+                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                             </div>
                         </div>
                     </div>
@@ -109,4 +117,25 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-qty').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/basket/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 {% endblock %}
