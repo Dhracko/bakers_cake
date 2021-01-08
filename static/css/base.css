@@ -138,12 +138,28 @@ body {
     background-color: rgba(202, 202, 202, 0.8);
 }
 
+/* From W3schools to hide the arrows from number*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
+  }
+  .form-group.w-50{
+      width: 30% !important;
   }
 }
 
