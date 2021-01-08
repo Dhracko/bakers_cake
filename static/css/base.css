@@ -158,11 +158,30 @@ input[type=number] {
   .container {
     max-width: 80%;
   }
-  .form-group.w-50{
-      width: 30% !important;
-  }
+  
 }
 
+/* Quantity bar input on xl & medium size screens */
+@media (min-width: 1200px){
+    .form-group.w-50{
+        width: 30% !important;
+    }
+    .qty-width{
+        width: 35% !important;
+    }
+}
+
+@media (min-width: 768px){
+
+    .qty-width{
+        width: 65% !important;
+    }
+}
+@media (max-width: 540px){
+    .qty-width{
+        width: 80% !important;
+    }
+}
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
