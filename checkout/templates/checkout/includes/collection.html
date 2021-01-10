@@ -1,0 +1,26 @@
+<script type="text/javascript">
+
+    $('input[type="checkbox"]').on('change', function() {
+        $('input[type="checkbox"]').not(this).prop('checked', false);
+    });
+
+    $(function () {
+        $("#id-collection").click(function () {
+            if ($(this).is(":checked")) {
+                $("#address").hide();
+            } else {
+                $("#address").show();
+            }
+        });
+    });
+
+    $(function () {
+        $("#id-delivery").click(function () {
+            if ($(this).is(":checked")) {
+                $("#address").show();
+            } else {
+                $("#address").hide();
+            }
+        });
+    });
+</script>
