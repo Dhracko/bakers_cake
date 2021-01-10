@@ -140,46 +140,6 @@ ul.breadcrumb li a:hover {
     width: 30% !important;
 }
 
-/* Basket Page */
-
-.img-basket {
-    width: 100%;
-    max-width: 200px;
-    max-height: 200px;
-}
-
-.wrp {
-    border: 1px solid #d1d1d1;
-    box-shadow: 0 4px 6px -2px rgba(0,0,0,.2);
-    background-color: rgba(216, 199, 255, 0.5); 
-    color: #05182A;
-}
-
-.qty-update {
-    width: 35% !important;
-}
-.bg-total {
-    background-color: rgba(202, 202, 202, 0.8);
-}
-
-.update-qty,
-.remove-item {
-    cursor: pointer;
-}
-
-/* From W3schools to hide the arrows from number*/
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
