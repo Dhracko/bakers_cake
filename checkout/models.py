@@ -18,6 +18,7 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+    collection = models.BooleanField()
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2,
                                         null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2,
@@ -37,7 +38,7 @@ class Order(models.Model):
         accounting for delivery costs.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
-        if settings.FREE_DELIVERY_COLLECTION:
+        if self.collection:
             self.delivery_cost = 0
         else:
             if self.order_total < settings.FREE_DELIVERY_THRESHOLD:

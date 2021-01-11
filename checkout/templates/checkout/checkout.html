@@ -79,11 +79,10 @@
                     </fieldset>
                     <div class="row">
                         <div class="col-3">
-                            <label class="form-check-label" for="id-collection">Click & Collect</label>
-                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-collection" name="collection">
+                            {{ order_form.collection | as_crispy_field }}
                         </div>
                         <div class="col-3">
-                            <label class="form-check-label" for="id-delivery">delivery</label>
+                            <label class="form-check-label" for="id-delivery">Delivery</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-delivery" name="delivery">
                         </div>
                     </div>
