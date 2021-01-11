@@ -32,11 +32,11 @@ ul.breadcrumb li {
   font-size: 16px;
 }
 
-/* Add a slash symbol (/) before/behind each list item */
+/* Add a slash symbol (<) before/behind each list item */
 ul.breadcrumb li+li:before {
   padding: 8px;
   color: black;
-  content: "/\00a0";
+  content: "<\00a0";
 }
 
 /* Add a color to all links inside the list */
@@ -143,24 +143,6 @@ ul.breadcrumb li a:hover {
 
 .w-30 {
     width: 30% !important;
-}
-
-/* ------------------------------- bootstrap toasts */
-
-.toast-container {
-    position: absolute!important;
-    transform: translate(-50%,-50%)!important;
-    left: 50%!important;
-    top: 50%!important;
-    z-index: 99999999999;
-}
-
-.custom-toast {
-    overflow: visible;
-}
-
-.toast-capper {
-    height: 2px;
 }
 
 /* -------------------------------- Media Queries */
