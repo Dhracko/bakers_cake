@@ -22,7 +22,6 @@ def basket_contents(request):
             'product': product,
         })
 
-
     # Calculate the cost of delivery and it's free if it past the threshold
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)

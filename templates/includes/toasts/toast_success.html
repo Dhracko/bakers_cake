@@ -1,27 +1,40 @@
-<!-- <div class="toast-window rounded-0 border-top-0" data-autohide="false">
-    <div class="col-12">
-        <button type="button" class="ml-2 mb-1 close text-dark-blue" data-dismiss="toast-window" aria-label="Close">
-            <span aria-hidden="true">&times; <small>Close</small></span>
-        </button>
-    </div>
-    <div class="toast-body bg-white">
-        {{ message }}
-    </div>
-</div> -->
-
-<!-- Modal -->
 <div class="modal-content">
     <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Congratulations!</h5> -->
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true"><i class="fas fa-times"></i></span>
         </button>
     </div>
     <div class="modal-body">
-        {{ message }}
+        <div class="row">
+            <div class="col-3"><i class="fas fa-check-circle fa-5x"></i></div>
+            <div class="col-9">
+                {{ message }}
+            </div>
+        </div>
+        
     </div>
-    <div class="modal-footer">
+    <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+    </div> -->
+    <div class="row">
+        <ul>
+            <li><p>All cakes are baked to order after you ghave completed payment at checkout.</p></li>
+            <li>You will notified by SMS when your cake is ready for departure or collection.</li>
+            <li>All collection must be done within 4 days or receiving the text SMS, failure to do so your card will be still be charge 
+                and <strong>NO</strong> refund will be offered</li>
+        </ul>
+        <div class="col-6 text-right">
+            <a href="{% url 'checkout' %}" class="btn btn-black rounded btn-lg">
+                <span class="text-uppercase">Proceed To Delivery  </span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+        <div class="col-6 text-right">
+            <a href="{% url 'products' %}" class="btn rounded btn-lg">
+                <span class="text-uppercase">Continue Shopping</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
     </div>
 </div>

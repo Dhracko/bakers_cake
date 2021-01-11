@@ -77,7 +77,7 @@
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-3">
                             {{ order_form.collection | as_crispy_field }}
                         </div>
@@ -85,7 +85,7 @@
                             <label class="form-check-label" for="id-delivery">Delivery</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-delivery" name="delivery">
                         </div>
-                    </div>
+                    </div> -->
                     <fieldset id="address" class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                         {{ order_form.phone_number | as_crispy_field }}
@@ -142,6 +142,6 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-{% include 'checkout/includes/collection.html' %}
+<!-- {{ block.super }}
+{% include 'checkout/includes/collection.html' %} -->
 {% endblock %}

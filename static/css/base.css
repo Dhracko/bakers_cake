@@ -145,6 +145,18 @@ ul.breadcrumb li a:hover {
     width: 30% !important;
 }
 
+/* -------------------------------- Model CSS */
+
+.modal-header{
+    border-bottom: 0 !important;
+}
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 936px;
+    }
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
