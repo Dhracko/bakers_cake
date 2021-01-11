@@ -13,6 +13,11 @@ body {
     flex-direction: column;
 }
 
+.main-logo {
+    border: 2px solid rgb(153, 0, 255);
+    border-radius: 50px;
+}
+
 /* Breadcrumb */
 /* Style the list */
 ul.breadcrumb {
@@ -138,6 +143,24 @@ ul.breadcrumb li a:hover {
 
 .w-30 {
     width: 30% !important;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.toast-container {
+    position: absolute!important;
+    transform: translate(-50%,-50%)!important;
+    left: 50%!important;
+    top: 50%!important;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 /* -------------------------------- Media Queries */
