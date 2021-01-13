@@ -37,11 +37,15 @@ ul.breadcrumb li {
   font-size: 16px;
 }
 
-/* Add a slash symbol (/) before/behind each list item */
+/* Add a slash symbol (<) before/behind each list item */
 ul.breadcrumb li+li:before {
   padding: 8px;
   color: black;
+<<<<<<< HEAD
   content: "< ";
+=======
+  content: "<\00a0";
+>>>>>>> toast
 }
 
 /* Add a color to all links inside the list */
@@ -148,6 +152,18 @@ ul.breadcrumb li a:hover {
 
 .w-30 {
     width: 30% !important;
+}
+
+/* -------------------------------- Model CSS */
+
+.modal-header{
+    border-bottom: 0 !important;
+}
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 936px;
+    }
 }
 
 /* -------------------------------- Media Queries */

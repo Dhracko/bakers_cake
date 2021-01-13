@@ -14,6 +14,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- basket header -->
  <div class="container mb-2">
     <div class="row">
         <div class="col">
@@ -21,7 +22,7 @@
             <hr>
         </div>
     </div>
-    
+    <!-- Items in the Basket -->
     {% if basket_items %}
         <div class="row mt-4">
             <div class="col-sm-12 col-xl-8  wrp">              
@@ -90,17 +91,25 @@
                         </p>
                         {% endif %}
                     </div>
-                </div>
+            </div>
         </div>
         
-                                 
+        <!-- Delivery Button -->
+        <div class="row">
+            <div class="col text-right">
+            <a href="{% url 'checkout' %}" class="btn btn-black rounded btn-lg">
+                <span class="text-uppercase">Proceed To Delivery  </span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div> 
+        <!-- Collection Button -->
         <div class="col text-right">
         <a href="{% url 'checkout' %}" class="btn btn-black rounded btn-lg">
             <span class="text-uppercase right-border-line">Proceed To Delivery </span>
             <i class="fas fa-chevron-right"></i>
         </a>
-    </div>                       
-        
+    </div>                             
+    <!-- Empty Basket -->
     {% else %}
         <div class="col">
             <p class="lead mb-5">Your basket is empty.</p>
