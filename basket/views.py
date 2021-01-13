@@ -26,7 +26,6 @@ def adjust_basket(request, item_id):
     """ Adjust the quantity of the specified cake in the shopping basket """
 
     quantity = int(request.POST.get('quantity'))
-    # redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
 
     if quantity > 0:

@@ -10,7 +10,6 @@ def basket_contents(request):
     total = 0
     product_count = 0
     basket = request.session.get('basket', {})
-    # free_delivery_collection = settings.FREE_DELIVERY_COLLECTION
 
     for item_id, quantity in basket.items():
         product = get_object_or_404(Product, pk=item_id)
@@ -21,7 +20,6 @@ def basket_contents(request):
             'quantity': quantity,
             'product': product,
         })
-
 
     # Calculate the cost of delivery and it's free if it past the threshold
     if total < settings.FREE_DELIVERY_THRESHOLD:
@@ -40,7 +38,6 @@ def basket_contents(request):
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'free_delivery_collection': settings.FREE_DELIVERY_COLLECTION,
         'grand_total': grand_total,
     }
 

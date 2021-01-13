@@ -5,8 +5,8 @@ from .models import Order
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ('full_name', 'email', 'collection',
-                  'phone_number', 'street_address1', 'street_address2',
+        fields = ('full_name', 'email', 'phone_number',
+                  'street_address1', 'street_address2',
                   'town_or_city', 'postcode', 'county',)
 
     def __init__(self, *args, **kwargs):
@@ -18,7 +18,6 @@ class OrderForm(forms.ModelForm):
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',
-            'collection': 'Click &amp; Collect',
             'phone_number': 'Phone Number',
             'postcode': 'Postcode',
             'street_address1': 'Street Address 1',
