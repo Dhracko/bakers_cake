@@ -41,11 +41,7 @@ ul.breadcrumb li {
 ul.breadcrumb li+li:before {
   padding: 8px;
   color: black;
-<<<<<<< HEAD
   content: "< ";
-=======
-  content: "<\00a0";
->>>>>>> toast
 }
 
 /* Add a color to all links inside the list */

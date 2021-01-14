@@ -24,7 +24,6 @@ class Order(models.Model):
                                       null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2,
                                       null=False, default=0)
-    collection = models.BooleanField(default=True)
 
     def _generate_order_number(self):
         """

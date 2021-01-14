@@ -24,7 +24,6 @@ class OrderForm(forms.ModelForm):
             'street_address2': 'Street Address 2',
             'town_or_city': 'Town or City',
             'county': 'County',
-            'collection': 'Click and Collect',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True

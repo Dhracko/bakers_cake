@@ -239,6 +239,9 @@ Initial Deployment:
 
 ## 12. Acknowledgements <a name="Acknowledgements"></a>
 * I would like to thank Rohit Sharma (my mentor) for his invaluable feedback, help and advice.
+* To the Tutor Stephen & Alan at Code Institute for showing the patient when I've got stuck with some code.
+* I would like to thank to [Tony Teaches Tech](https://www.youtube.com/channel/UCWPJwoVXJhv0-ucr3pUs1dA) and his video 
+[How to Pass Values Between HTML Pages Using Django Forms](https://www.youtube.com/watch?v=vmP1r6xiJog&t=442s) which helped me to understand django and html relations.
 
 
 ## 13. Disclaimer <a name="Disclaimer"></a>
