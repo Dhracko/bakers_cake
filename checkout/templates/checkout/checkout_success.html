@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <h2 class="logo-font mb-4 mt-5">Thank you</h2>
+            <hr>
+            <p>Your order will be process as quickly as possible. An email confirmation will be sent to <strong>{{ order.email }}</strong>
+                 and another when the cakes are ready for dispatch.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-7"></div>
+        </div>
+</div>   
+{% endblock %}
