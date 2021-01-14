@@ -2,7 +2,6 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
-import django_countries.fields
 
 
 class Migration(migrations.Migration):
@@ -27,7 +26,6 @@ class Migration(migrations.Migration):
                 ('street_address1', models.CharField(max_length=80)),
                 ('street_address2', models.CharField(blank=True, max_length=80, null=True)),
                 ('county', models.CharField(blank=True, max_length=80, null=True)),
-                ('country', django_countries.fields.CountryField(max_length=2)),
                 ('date', models.DateTimeField(auto_now_add=True)),
                 ('delivery_cost', models.DecimalField(decimal_places=2, default=0, max_digits=6)),
                 ('order_total', models.DecimalField(decimal_places=2, default=0, max_digits=10)),
