@@ -130,13 +130,13 @@
                     {% for message in messages %}
                         {% with message.level as level %}
                             {% if level == 40 %}
-                                {% include 'includes/toasts/toast_error.html' %}
+                                {% include 'includes/modals/modal_error.html' %}
                             {% elif level == 30 %}
-                                {% include 'includes/toasts/toast_warning.html' %}
+                                {% include 'includes/modals/modal_warning.html' %}
                             {% elif level == 25 %}
-                                {% include 'includes/toasts/toast_success.html' %}
+                                {% include 'includes/modals/modal_success.html' %}
                             {% else %}
-                                {% include 'includes/toasts/toast_info.html' %}
+                                {% include 'includes/modals/modal_info.html' %}
                             {% endif %}
                         {% endwith %}
                     {% endfor %}
