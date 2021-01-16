@@ -14,7 +14,6 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
-    """Check if the user has the save info checked"""
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -40,29 +39,34 @@ def checkout(request):
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
-            'street_address1': request.POST['street_address1'],
-            'street_address2': request.POST['street_address2'],
+            'phone_number': request.POST['phone_number'],
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
-            'phone_number': request.POST['phone_number'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_basket = json.dumps(basket)
+            order.save()
             for item_id, item_data in basket.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
                             order=order,
                             product=product,
                             quantity=item_data,
                         )
-                    order_line_item.save()
+                        order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "Sorry there was a problem locating the cake you wanted in our database!. "
-                        "Please call us for assistance!")
+                        "One of the products in your basket wasn't found in our database. "
+                        "Please contact us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_basket'))
@@ -87,20 +91,21 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Dev message if you forget to set Public key
-        if not stripe_public_key:
-            messages.warning(request, 'Stripe public key is missing. \
-                Did you forget to set it in your environment?')
-
         order_form = OrderForm()
-        template = 'checkout/checkout.html'
-        context = {
-            'order_form': order_form,
-            'stripe_public_key': stripe_public_key,
-            'client_secret': intent.client_secret,
-        }
 
-        return render(request, template, context)
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing. \
+            Did you forget to set it in your environment?')
+
+    template = 'checkout/checkout.html'
+    context = {
+        'order_form': order_form,
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
 
 
 def checkout_success(request, order_number):

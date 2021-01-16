@@ -96,7 +96,7 @@
                     {{ order_form.phone_number | as_crispy_field }}
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-saved-info">Save this delivery information to my
+                        <label class="form-check-label" for="id-save-info">Save this delivery information to my
                             profile for the future</label>
                         <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
                             checked>
@@ -110,11 +110,14 @@
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-dark-blue px-2 w-auto">Payment</legend>
-
+                    <!-- Stripe element goes here -->
                     <div class="mb-3" id="card-element"></div>
 
-
+                    <!-- Used to display any form errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    
+                    <!-- Pass the client secret to the view so we can get payment intent id -->
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
 
                 <div class="submit-button text-right mt-5 mb-2">
