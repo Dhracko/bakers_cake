@@ -53,7 +53,9 @@
 
     <form method="post" action="{% url 'account_email' %}" class="add_email">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="col-12 col-lg-8 col-xl-7 pl-0">
+            {{ form|crispy }}
+        </div>
         <button name="action_add" type="submit">{% trans "Add E-mail" %}</button>
     </form>
   {% endif %}
