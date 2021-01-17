@@ -82,7 +82,7 @@
                 </fieldset>
 
                 <!-- Address -->
-                <fieldset id="address" class="rounded px-3 mb-2">
+                <fieldset class="rounded px-3 mb-2">
                     <legend class="fieldset-label small text-dark-blue px-2 w-auto">Address</legend>
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
@@ -94,25 +94,22 @@
                             {{ order_form.postcode | as_crispy_field }}
                         </div> 
                     </div>                  
-                    {{ order_form.county | as_crispy_field }}
-                    
+                    {{ order_form.county | as_crispy_field }}                    
                     {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
                     
                 {% if user.is_authenticated %}
                 <!-- Save Delivery -->
                     <fieldset class="text-dark-blue rounded mb-4 pr-5 text-right">
-                        <!-- <div class="row px-3 mb-4"> -->
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my
                                 profile for the future</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
                                 checked>
-                        <!-- </div> -->
                     </fieldset>
 
                 <!-- Payment -->
                     <fieldset class="rounded px-3 tm-2">
-                        <legend class="fieldset-label small text-dark-blue px-2 w-auto">Payment</legend>
+                        <legend class="small text-dark-blue px-2 w-auto">Payment</legend>
                             <!-- Stripe element goes here -->
                             <div class="mb-3" id="card-element"></div>
 
