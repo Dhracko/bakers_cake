@@ -4,7 +4,7 @@ from .models import Product, Category
 
 class ProductForm(forms.ModelForm):
     """
-    Will extend the ModelForm for admin to manage products and categories
+    Create a form for product management
     """
 
     class Meta:

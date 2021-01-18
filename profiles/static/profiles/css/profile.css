@@ -3,15 +3,6 @@
     overflow-y: auto;
 }
 
-.profile-border {
-    border: 1px solid #01447e !important;
-}
-
 #profile-update-form input::placeholder {
     color: #aab7c4;
-}
-
-.profile-border:focus,
-.profile-border:active {
-  box-shadow: 0 1px 3px 0 #01447e !important;
 }

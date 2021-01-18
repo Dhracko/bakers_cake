@@ -92,7 +92,7 @@ ul.breadcrumb li a:hover {
 }
 
 .border-blue {
-    border: 1px solid #01447e;
+    border: 1px solid #01447e !important;
 }
 
 .main-logo-link {
@@ -222,6 +222,13 @@ ul.breadcrumb li a:hover {
 
 .allauth-form-inner-content a {
 	color: #007bff; /* text-info */
+}
+
+/* -------------------------------- Add Products */
+
+.border-blue:focus,
+.border-blue:active {
+  box-shadow: 0 1px 3px 0 #01447e !important;
 }
 
 /* -------------------------------- Media Queries */
