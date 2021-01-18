@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h2 class="logo-font mb-4 mt-5">Cake Management</h2>
+            <h5 class="text-muted">Add a Cake</h5>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-12 col-md-6">
+                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-right">
+                        <a class="btn btn-outline-dark rounded" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-black rounded" type="submit">Update Cake</button>
+                    </div>
+                </form>
+            </div>            
+        
+    </div>
+</div>
+
+{% endblock %}
