@@ -1,0 +1,1 @@
+Bakers Cake Confirmation email for Order Number {{ order.order_number }}
