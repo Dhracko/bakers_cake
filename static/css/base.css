@@ -91,6 +91,10 @@ ul.breadcrumb li a:hover {
     color:  #05182A !important;
 }
 
+.border-blue {
+    border: 1px solid #01447e;
+}
+
 .main-logo-link {
     width: fit-content;
 }
