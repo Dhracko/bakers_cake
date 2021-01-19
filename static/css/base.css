@@ -221,14 +221,43 @@ ul.breadcrumb li a:hover {
 }
 
 .allauth-form-inner-content a {
-	color: #007bff; /* text-info */
+	color: #007bff;
 }
 
 /* -------------------------------- Add Products */
 
+
 .border-blue:focus,
 .border-blue:active {
   box-shadow: 0 1px 3px 0 #01447e !important;
+}
+
+/* -------------------------------- Edit/create Products */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: #01447e;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    box-shadow: 0 1px 3px 0 #01447e !important;
 }
 
 /* -------------------------------- Media Queries */
