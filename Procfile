@@ -1,0 +1,1 @@
+web: gunicorn bakers_cake.wsgi:application
