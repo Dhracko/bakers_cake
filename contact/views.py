@@ -15,9 +15,9 @@ def contact(request):
             contact_email = request.POST.get('contact_email', '')
             form_content = request.POST.get('content', '')
 
-            # Email the profile with the
+            # Email the admin with the
             # contact information
-            template = get_template('contact_template.txt')
+            template = get_template('contact/contact_template.txt')
             context = {
                 'contact_name': contact_name,
                 'contact_email': contact_email,
@@ -30,6 +30,6 @@ def contact(request):
                                  headers={'Reply-To': contact_email}
                                  )
             email.send()
-            return redirect('contact')
+            return redirect('home')
 
     return render(request, 'contact/contact.html', {'form': form_class, })
