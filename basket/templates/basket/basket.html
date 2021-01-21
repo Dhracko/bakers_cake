@@ -28,14 +28,14 @@
             <div class="col-sm-12 col-xl-8  wrp">              
                 {% for item in basket_items %}                   
                 <div class="row mb-4 pt-3">
-                    <div class="col-sm-2">
+                    <div class="col-12 col-sm-6">
                         {% if item.product.image %}
                             <img class="img-basket rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                         {% else %}
                             <img class="img-basket rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                         {% endif %}
                     </div>
-                    <div class="col-10">
+                    <div class="col-12 col-sm-6">
                         <div class="row">
                             <!-- Cake name -->
                             <div class="col-6 col-sm-4 mt-3 text-center">

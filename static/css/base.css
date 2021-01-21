@@ -30,40 +30,39 @@ input[name='q']::placeholder {
 /* Breadcrumb */
 /* Style the list */
 ul.breadcrumb {
-  padding: 10px 16px;
-  list-style: none;
-  background-color: rgba(216, 199, 255, 0);
+    padding: 10px 16px;
+    list-style: none;
+    background-color: rgba(216, 199, 255, 0);
 }
 
-/* Display list items side by side */
 ul.breadcrumb li {
-  display: inline;
-  font-size: 16px;
+    display: inline;
+    font-size: 16px;
 }
 
 /* Add a slash symbol (<) before/behind each list item */
 ul.breadcrumb li+li:before {
-  padding: 8px;
-  color: black;
-  content: "< ";
+    padding: 8px;
+    color: black;
+    content: "<";
 }
 
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
-  color: #05182A;
-  text-decoration: none;
+    color: #05182A;
+    text-decoration: underline;
 }
 
 /* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
-  color: #01447e;
-  text-decoration: underline;
+    color: #01447e;
+    text-decoration: underline;
 }
 
 /* make the footer stay at the bottom  */
 .wrap-container {
-  padding-bottom: 2.5rem;
-  flex: 1;
+    padding-bottom: 2.5rem;
+    flex: 1;
 }
 
 .h-90 {
@@ -262,7 +261,7 @@ ul.breadcrumb li a:hover {
 
 /* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
+/* Larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
@@ -271,19 +270,10 @@ ul.breadcrumb li a:hover {
 }
 
 /* Quantity bar input on xl & medium size screens */
-@media (min-width: 1200px){
-    .form-group.w-50{
-        width: 30% !important;
-    }
-    .qty-width{
-        width: 35% !important;
-    }
-}
-
 @media (min-width: 768px){
 
     .qty-width{
-        width: 65% !important;
+       width: fit-content !important;
     }
 }
 @media (max-width: 540px){
@@ -306,28 +296,108 @@ ul.breadcrumb li a:hover {
     }
 }
 
-/* padding the top a bit when navbar is collapsed on mobile */
+/* On mobile Style */
 @media (max-width: 991px) {
+    /* padding the top a bit when navbar is collapsed */
     .header-container {
-        padding-top: 134px;
+        padding-top: 6rem;
     }
 
     body {
         height: calc(100vh - 140px);
     }
 
-    .display-4 {
-    font-size: 3rem;
+    .display-4.hero-font.text-dark-blue {
+        font-size: 2rem;
     }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+    .btn.btn-outline-black.rounded,
+    .btn.btn-black.rounded {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded.btn-lg,
+    .btn.btn-black.rounded.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
+
+    /* Background at cakes on mobile */
+    .product-details-container {
+        background: #D8C7FF;
+        color: #05182A;
+    }
+
+    /* Basket */
+    .img-basket {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }    
 }
 
-/* Padding and font-size for Galaxy Fold compativility */
+
+
+/* Padding and font-size for 280px screens */
 @media (max-width: 310px){
-    .header-container {
-        padding-top: 190px;
+    .nav-link {
+        padding: 0.10rem;
     }
 
-    .display-4 {
-    font-size: 2rem;
+    .nav-link i.fa-sm {
+        font-size: 0.75rem;
+    }
+
+    .navbar-toggler {
+        padding: .3rem .3rem;
+        font-size: .75rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .6rem;
+    }
+    .btn.btn-outline-black.rounded,
+    .btn.btn-black.rounded {
+        padding: .275rem .275rem;
+    }
+
+    .btn.btn-outline-black.rounded.btn-lg,
+    .btn.btn-black.rounded.btn-lg {
+        padding: .27rem .27rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .15rem .25rem !important;
+    }
+
+    .text-center p.my-0 {
+        font-size: .75rem;
+    }
+
+    .dropdown-item {
+        padding: .25rem .2rem;
+        font-size: smaller;
     }
 }
