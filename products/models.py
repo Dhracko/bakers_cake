@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 # Category Model
@@ -33,3 +34,25 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+RATE_CHOICES = [
+    (1, '1 - Trash'),
+    (2, '2 - Edible'),
+    (3, '3 - I had Better'),
+    (4, '4 - Fantastic'),
+    (5, '5 - Amazing'),
+]
+
+
+class Review(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
+    text = models.TextField(max_length=3000, blank=True)
+    rate = models.PositiveSmallIntegerField(choices=RATE_CHOICES)
+    likes = models.PositiveIntegerField(default=0)
+    unlikes = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return self.user.username

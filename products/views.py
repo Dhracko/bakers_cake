@@ -2,9 +2,11 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from django.contrib.auth.decorators import login_required
+
 from .models import Product, Category
-from .forms import ProductForm
+from .forms import ProductForm, RateForm
 
 
 def all_products(request):
@@ -142,3 +144,34 @@ def delete_product(request, product_id):
     messages.success(request, 'Cake deleted!')
 
     return redirect(reverse('products'))
+
+
+def rate_product(request, product_id):
+    """ Rate and review a product """
+    product = get_object_or_404(Product, pk=product_id)
+    # product = Product.objects.get(pk=product_id)
+    user = request.user
+
+    context = {
+        'product': product,
+    }
+
+    if request.method == 'POST':
+        form = RateForm(request.POST)
+        if form.is_valid():
+            rate = form.save(commit=False)
+            rate.user = user
+            rate.product = product
+            rate.save()
+            return render(request, 'products/cake_detail.html', context)
+    else:
+        form = RateForm
+
+    template = 'products/rate.html'
+
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
