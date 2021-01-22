@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 html {
     height: 100%;
 }
@@ -9,8 +16,13 @@ body {
     min-height: 100vh;
     color: #555;
     font-family: 'Montserrat', sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .title {
@@ -21,6 +33,22 @@ body {
 
 .right-border-line {
     border-right: 1px solid #605e5ed6;
+}
+
+input[name='q']::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+
+input[name='q']::-moz-placeholder {
+    color: #aab7c4;
+}
+
+input[name='q']:-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+input[name='q']::-ms-input-placeholder {
+    color: #aab7c4;
 }
 
 input[name='q']::placeholder {
@@ -62,7 +90,9 @@ ul.breadcrumb li a:hover {
 /* make the footer stay at the bottom  */
 .wrap-container {
     padding-bottom: 2.5rem;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 
 .h-90 {
@@ -79,9 +109,15 @@ ul.breadcrumb li a:hover {
 
 /* from Bulma */
 .icon {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
 }
@@ -95,6 +131,8 @@ ul.breadcrumb li a:hover {
 }
 
 .main-logo-link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -185,6 +223,22 @@ ul.breadcrumb li a:hover {
     display: none;
 }
 
+.allauth-form-inner-content input::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-moz-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input:-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-ms-input-placeholder {
+    color: #aab7c4;
+}
+
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
@@ -209,7 +263,11 @@ ul.breadcrumb li a:hover {
     border-radius: 4px;
 
     /* standard bootstrap btn transitions */
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
@@ -228,7 +286,8 @@ ul.breadcrumb li a:hover {
 
 .border-blue:focus,
 .border-blue:active {
-  box-shadow: 0 1px 3px 0 #01447e !important;
+  -webkit-box-shadow: 0 1px 3px 0 #01447e !important;
+          box-shadow: 0 1px 3px 0 #01447e !important;
 }
 
 /* -------------------------------- Edit/create Products */
@@ -256,7 +315,8 @@ ul.breadcrumb li a:hover {
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
     border-color: #dc3545;
-    box-shadow: 0 1px 3px 0 #01447e !important;
+    -webkit-box-shadow: 0 1px 3px 0 #01447e !important;
+            box-shadow: 0 1px 3px 0 #01447e !important;
 }
 
 /* -------------------------------- Media Queries */
@@ -273,6 +333,8 @@ ul.breadcrumb li a:hover {
 @media (min-width: 768px){
 
     .qty-width{
+       width: -webkit-fit-content !important;
+       width: -moz-fit-content !important;
        width: fit-content !important;
     }
 }

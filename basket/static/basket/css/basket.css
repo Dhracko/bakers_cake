@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .img-basket {
     width: 100%;
     max-width: 200px;
@@ -6,7 +13,8 @@
 
 .wrp {
     border: 1px solid #d1d1d1;
-    box-shadow: 0 4px 6px -2px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 4px 6px -2px rgba(0,0,0,.2);
+            box-shadow: 0 4px 6px -2px rgba(0,0,0,.2);
     background-color: rgba(216, 199, 255, 0.5); 
     color: #05182A;
 }
