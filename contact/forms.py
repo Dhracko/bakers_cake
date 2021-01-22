@@ -34,5 +34,6 @@ class ContactForm(forms.Form):
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-blue rounded contact-form'
+            self.fields[field].widget.attrs['class'] = 'border-blue\
+                                                        rounded contact-form'
             self.fields[field].label = False
