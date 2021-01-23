@@ -120,7 +120,16 @@
                 <hr class="mb-3">
                 <h2 class="logo-font">Reviews</h2>
                 <!-- Review code here -->
-                <p>Reviews goes here</p>
+                <ul>
+                    {% for review in reviews %}
+                    <li class="list-inline-item">
+                        <span><b>{{ review.user}}</b></span>
+                        <p>@{{ review.date }}</p>
+                        <a href=""><i class="fas fa-star mr-1" aria-hidden="true"></i>{{ review.rate }} / 5</a>
+                        <p>{{ review.text }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
                 <hr class="mt-3">
             </div>
         </div>

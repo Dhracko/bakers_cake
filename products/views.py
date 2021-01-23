@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.db.models import Q
+from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 
 from django.contrib.auth.decorators import login_required
 
-from .models import Product, Category
+from .models import Product, Category, Review
 from .forms import ProductForm, RateForm
 
 
@@ -64,9 +64,15 @@ def product_detail(request, product_id):
     """ A view to show individual cake details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.all()
+    reviews_avg = reviews.aggregate(Avg('rate'))
+    reviews_count = reviews.count()
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'reviews_avg': reviews_avg,
+        'reviews_count': reviews_count
     }
 
     return render(request, 'products/cake_detail.html', context)
@@ -150,7 +156,6 @@ def delete_product(request, product_id):
 def rate_product(request, product_id):
     """ Rate and review a product """
     product = get_object_or_404(Product, pk=product_id)
-    # product = Product.objects.get(pk=product_id)
     user = request.user
 
     context = {
