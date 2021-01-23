@@ -395,7 +395,8 @@ ul.breadcrumb li a:hover {
     }
 
     .btn.btn-outline-black.rounded.btn-lg,
-    .btn.btn-black.rounded.btn-lg {
+    .btn.btn-black.rounded.btn-lg,
+    .btn-review {
         padding: .375rem .375rem;
         font-size: .75rem;
     }
@@ -452,7 +453,8 @@ ul.breadcrumb li a:hover {
     }
 
     .btn.btn-outline-black.rounded.btn-lg,
-    .btn.btn-black.rounded.btn-lg {
+    .btn.btn-black.rounded.btn-lg,
+    .btn-review {
         padding: .27rem .27rem;
         font-size: .75rem;
     }
