@@ -146,6 +146,7 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
+@login_required
 def rate_product(request, product_id):
     """ Rate and review a product """
     product = get_object_or_404(Product, pk=product_id)

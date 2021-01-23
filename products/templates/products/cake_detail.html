@@ -95,15 +95,36 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
-                    <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'rate_product' product.id %}" class="btn btn-outline-black rounded mt-5">
-                                    <span class="text-uppercase">Review</span>
-                                </a>
+
+                    <!-- Review button link-->
+                    {% if user.is_authenticated %}                    
+                    <div>
+                        <a href="{% url 'rate_product' product.id %}" class="btn btn-outline-dark rounded text-uppercase mt-3">
+                            <span class="text-uppercase">Review</span>
+                        </a>
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    {% else %}
+                    <label class="form-check-label mt-3 ml-0" for="id-save-info">
+                        <a class="" href="{% url 'account_login' %}">Login</a> to write a review
+                    </label>
+                    {% endif %}
+
                 </div>
             </div>
         </div>
+        
+        <!-- Users Reviews -->
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6 offset-lg-2">
+                <hr class="mb-3">
+                <h2 class="logo-font">Reviews</h2>
+                <!-- Review code here -->
+                <p>Reviews goes here</p>
+                <hr class="mt-3">
+            </div>
+        </div>
+       
     </div>
 {% endblock %}
 
