@@ -1,5 +1,6 @@
 from django import forms
 from .models import Order
+from django.forms import TextInput
 
 
 class OrderForm(forms.ModelForm):
@@ -8,6 +9,10 @@ class OrderForm(forms.ModelForm):
         fields = ('full_name', 'email', 'street_address1',
                   'street_address2', 'town_or_city',
                   'postcode', 'county', 'phone_number',)
+        widgets = {
+            'phone_number': TextInput(attrs={'type': 'tel',
+                                             'pattern': '[0-9]{11}'}),
+        }
 
     def __init__(self, *args, **kwargs):
         """

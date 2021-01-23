@@ -23,7 +23,7 @@ class Order(models.Model):
                                 null=True, blank=True)
     county = models.CharField(max_length=80,
                               null=True, blank=True)
-    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    phone_number = models.CharField(max_length=12, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2,
                                         null=False, default=0)
