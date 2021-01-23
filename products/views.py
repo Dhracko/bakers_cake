@@ -61,18 +61,16 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual cake details """
-
+    """
+    A view to show individual cake details
+    including the reviews
+    """
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.all()
-    reviews_avg = reviews.aggregate(Avg('rate'))
-    reviews_count = reviews.count()
 
     context = {
         'product': product,
         'reviews': reviews,
-        'reviews_avg': reviews_avg,
-        'reviews_count': reviews_count
     }
 
     return render(request, 'products/cake_detail.html', context)
@@ -169,7 +167,8 @@ def rate_product(request, product_id):
             rate.user = user
             rate.product = product
             rate.save()
-            return render(request, 'products/cake_detail.html', context)
+            messages.success(request, 'Cake reviewed!')
+            return redirect(reverse('product_detail', args=[product.id]))
     else:
         form = RateForm
 

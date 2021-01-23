@@ -122,12 +122,21 @@
                 <!-- Review code here -->
                 <ul>
                     {% for review in reviews %}
-                    <li class="list-inline">
-                        <span><b>{{ review.user}}</b></span>
-                        <p>@{{ review.date }}</p>
-                        <a href=""><i class="fas fa-star mr-1" aria-hidden="true"></i>{{ review.rate }} / 5</a>
-                        <p>{{ review.text }}</p>
-                    </li>
+                        {% if product.id == review.product.id %}
+                        <li class="list-inline">
+                            <div class="row">
+                                <div class="col-6 pl-2">
+                                    <span><b>{{ review.user}}</b></span>
+                                    <p>{{ review.date }}</p>
+                                    <p>{{ review.text }}</p>
+                                </div>
+                                <div class="col-6 text-right pr-2">
+                                    <a href=""><i class="fas fa-star mr-1" aria-hidden="true"></i>{{ review.rate }} / 5</a>
+                                </div>
+                            </div>
+                        </li>
+                        <hr>
+                        {% endif %}
                     {% endfor %}
                 </ul>
                 <hr class="mt-3">
