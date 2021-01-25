@@ -1,3 +1,5 @@
+""" Forms for products"""
+
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category
@@ -27,6 +29,7 @@ class ProductForm(forms.ModelForm):
 
 
 class RateForm(forms.ModelForm):
+    """ Create a form for Rate """
     text = forms.CharField(widget=forms.Textarea(attrs={'id': 'exampleFormControlTextarea1', 'rows': "3"}), required=False)
     rate = forms.ChoiceField(choices=RATE_CHOICES, widget=forms.Select(), required=True)
 

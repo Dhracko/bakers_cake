@@ -1,3 +1,5 @@
+"""Web request and returns a Web response for basket"""
+
 from django.shortcuts import (
     render, redirect, reverse, HttpResponse, get_object_or_404)
 from django.contrib import messages

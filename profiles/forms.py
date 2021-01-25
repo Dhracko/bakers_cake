@@ -1,3 +1,5 @@
+""" Forms for profiles """
+
 from django import forms
 from .models import UserProfile
 

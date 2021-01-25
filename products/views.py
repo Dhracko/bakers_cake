@@ -1,3 +1,5 @@
+"""Web request and returns a Web response for products"""
+
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q

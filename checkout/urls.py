@@ -1,3 +1,5 @@
+""" Define the mapping between URLs and views """
+
 from django.urls import path
 from . import views
 from .webhooks import webhook

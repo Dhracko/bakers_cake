@@ -1,7 +1,4 @@
-"""
-Admin Module
-Use to register the models
-"""
+"""Display the models in the admin panel"""
 
 
 from django.contrib import admin

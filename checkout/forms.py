@@ -1,3 +1,5 @@
+""" Forms for checkout """
+
 from django import forms
 from .models import Order
 from django.forms import TextInput

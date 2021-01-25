@@ -1,3 +1,5 @@
+""" Forms for contact """
+
 from django import forms
 
 

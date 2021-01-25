@@ -1,7 +1,9 @@
+"""Web request and returns a Web response for contact"""
+
 from django.shortcuts import render, redirect
 from django.core.mail import EmailMessage
-from .forms import ContactForm
 from django.template.loader import get_template
+from .forms import ContactForm
 
 
 def contact(request):

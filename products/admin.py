@@ -1,8 +1,11 @@
+"""Display the models in the admin panel"""
+
 from django.contrib import admin
 from .models import Product, Category, Review
 
 
 class ProductAdmin(admin.ModelAdmin):
+    """ Products Data to display"""
     list_display = (
         'name',
         'sku',
@@ -16,6 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    """ Categories Data to display"""
     list_display = (
         'friendly_name',
         'name',
@@ -23,6 +27,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ReviewAdmin(admin.ModelAdmin):
+    """ Reviews Data to display"""
     fields = ('user',
               'text', 'rate', 'likes', 'unlikes',)
 
