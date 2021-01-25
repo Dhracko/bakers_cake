@@ -22,6 +22,8 @@ class UserProfileForm(forms.ModelForm):
             'default_phone_number': 'Phone Number',
         }
 
+        custom_button = 'border-blue rounded profile-form-input'
+
         self.fields['default_street_address1'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
@@ -29,6 +31,5 @@ class UserProfileForm(forms.ModelForm):
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-blue rounded \
-                 profile-form-input'
+            self.fields[field].widget.attrs['class'] = custom_button
             self.fields[field].label = False
