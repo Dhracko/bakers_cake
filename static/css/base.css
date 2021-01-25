@@ -126,10 +126,6 @@ ul.breadcrumb li a:hover {
     color:  #05182A !important;
 }
 
-.border-blue {
-    border: 1px solid #01447e !important;
-}
-
 .main-logo-link {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -281,11 +277,14 @@ ul.breadcrumb li a:hover {
 	color: #007bff;
 }
 
-/* -------------------------------- Add Products */
+/* -------------------------------- Custom Form border */
 
+.form-control {
+    border: 1px solid #01447e !important;
+}
 
-.border-blue:focus,
-.border-blue:active {
+.form-control:focus,
+.form-control:active {
   -webkit-box-shadow: 0 1px 3px 0 #01447e !important;
           box-shadow: 0 1px 3px 0 #01447e !important;
 }

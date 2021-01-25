@@ -22,7 +22,7 @@ class UserProfileForm(forms.ModelForm):
             'default_phone_number': 'Phone Number',
         }
 
-        custom_button = 'border-blue rounded profile-form-input'
+        custom_button = 'rounded profile-form-input'
 
         self.fields['default_street_address1'].widget.attrs['autofocus'] = True
         for field in self.fields:
