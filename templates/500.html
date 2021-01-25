@@ -1,10 +1,30 @@
-{% extends 'base.html' %} {% block content %}
-<div class="col-12 no-result">
-    <h3>Looks like some one forgot to pay the energy bill</h3>
-    <h4>There is been an internal error within the server. Please click the link below to take you back to the home
-        page.</h4>
-    <a class="btn btn-black rounded mr-5" href="{% url 'home' %}" id="home-link">
-        HOME
-    </a>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container h-90">
+    <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="display-4 hero-font text-dark-blue">
+                Looks like some one forgot to pay the energy bill
+            </h1>
+            <h5>There is been an internal error within the server. Please click the link below to take you back to the home
+                page.
+            </h5>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'home' %}" class="btn btn-lg rounded py-3">Home</a>
+                </h4>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
