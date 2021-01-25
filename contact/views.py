@@ -28,7 +28,8 @@ def contact(request):
             content = template.render(context)
 
             email = EmailMessage("New contact form submission", content,
-                                 "Bakers Cake" + '', ['bakerscake.web@gmail.com'],
+                                 "Bakers Cake" + '',
+                                 ['bakerscake.web@gmail.com'],
                                  headers={'Reply-To': contact_email}
                                  )
             email.send()

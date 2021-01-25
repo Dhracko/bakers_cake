@@ -181,7 +181,7 @@ You can view the testing done in the [test.md](https://github.com/Dhracko/bakers
 
 ### Issues and resolutions <a name="Issues"></a>
  
----
+--- During the automated testing, i realised I set the postcode input value to "blank=True" but it's necesary for the card payment, to I changed to "False".
 
 ## 10. Deployment <a name="Deployment"></a>
 Initial Deployment:
