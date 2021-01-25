@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<div class="col-12 no-result">
+    <h3>Looks like some one forgot to pay the energy bill</h3>
+    <h4>That page no longer exists. Please click the link below to take you back to the home
+        page.</h4>
+    <a class="btn btn-black rounded mr-5" href="{% url 'home' %}" id="home-link">
+        HOME
+    </a>
+</div>
+{% endblock %}
