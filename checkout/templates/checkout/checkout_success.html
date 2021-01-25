@@ -16,12 +16,14 @@
 {% block content %}
 <div class="container mb-2">
     <div class="row">
-        <div class="col">
+        <div class="col text-dark-blue">
             <h2 class="logo-font mb-4 mt-5">Thank you for your purchase!</h2>
             <hr>
-            <p>Your order with the number {{ order_number }} will be process as quickly as possible.</p>
+            <p>Your order with the number {{ order.order_number }} will be process as quickly as possible.</p>
             <p>An email confirmation will be sent to <strong>{{ order.email }}</strong>
                 and another when the order is ready ready for dispatch.</p>
+            <p>All cakes are baked to order after you have completed the payment at checkout.</p>
+            <p>We will notified you by SMS when your cake is ready to leave our bakery.</p>
         </div>
     </div>
 

@@ -1,6 +1,5 @@
 <div class="modal-content">
     <div class="modal-header">
-        <!-- <h5 class="modal-title" id="exampleModalLabel">Congratulations!</h5> -->
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true"><i class="fas fa-times"></i></span>
         </button>
@@ -14,17 +13,12 @@
                 {{ message }}
             </div>
         </div>
-        
     </div>
 
     <div class="row">
-        <ul>
-            <li><p>All cakes are baked to order after you have completed the payment at checkout.</p></li>
-            <li><p>We will notified you by SMS when your cake is ready to leave our bakery.</p></li>
-        </ul>
 
         {% if basket_items %}
-        <div class="col-12 text-right mb-2">
+        <div class="col-12 col-lg-6 text-right mb-2">
             <a href="{% url 'view_basket' %}" class="btn btn-black rounded btn-lg">
                 <span class="text-uppercase">Proceed to Basket</span>
                 <i class="fas fa-chevron-right"></i>
@@ -32,7 +26,7 @@
         </div>
         {% endif %}
         
-        <div class="col-12 text-right mb-2">
+        <div class="col-12 col-lg-6 text-right mb-2">
             <a href="{% url 'products' %}" class="btn btn-black rounded btn-lg">
                 <span class="text-uppercase">Continue Shopping</span>
                 <i class="fas fa-chevron-right"></i>
