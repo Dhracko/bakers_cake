@@ -66,9 +66,78 @@ To help this business to stand out from other online, the website needs to ensur
 ---
 ## 3. User Stories <a name="Users"></a>
 
-User Stories were created using a spreadsheet for easier tracking on development and better description.
+**New user**.
 
-The Users Stories can be found [here](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/user_stories.pdf)
+New visitors to the website should be provided with the answers they need right away. These include:
+
+* As a new user, I want to be able view a list of all the cakes available to purchase.
+* As a new user, I want to be able view the cakes details, that includes the price,description, cake rating and an image.
+* As a new user, I want to be able submit my email so i can subscribe to a newsletter and find out any deals.
+* As a new user, I want to be able easily view the total of my shopping basket at any time so i can avoid spending too much.
+* As a new user, I want to be able contact the shop owner before registering so I can send them a message and confirm if they can produce the cakes I need.
+
+
+**Register and New Users**
+
+Registered users of the website will be provided with additional features which non-registered users will not benefit from.
+
+* As a registered user, I want to be able to register for a new account so I can have a personal account and be able to view my profile.
+* As a registered user, I want to be able to easily login or logout so i can access my personal account.
+* As a registered user, I want to be able to easily recover my password in case I forget it so I can recover the access to my account.
+* As a registered user, I want to be able to receive an email conffirmation confirming the registering so I can verify that my account registration was successfull.
+* As a registered user, I want to be able to have a personalized user profile so i can my personal order history and order confirmations and 
+save my address details.
+
+
+**Website shopper user stories**
+
+All shoppers of the website, new, returning or registered:
+
+* As a shopper, I want to be able to sort the list of available cakes so I easily identify the best rated, best priced and
+categorically sorted cakes.
+* As a shopper, I want to be able to sort for a specific category of cakes so I can find the best-priced or best rated 
+cakes in a specific category or sort the cakes in that category by name.
+* As a shopper, I want to be able to sort multiple categories of cakes simultaneously so i can find the best priced or rated cakes 
+across broad categories, such as "birthday" or "sponge".
+* As a shopper, I want to be able to search for a cake by name or description so i can find a specific cake I'd like 
+to purchase.
+* As a shopper, I want to be able to easily see what I've search for and the number of results so i can quickly decide whether the cake
+I want is available.
+* As a registered shopper, I want to be able to easily rate a cake so I can raet any of the cake based on my experience.
+* As a registered shopper, I want to be able to leave a review of a cake so I can review any of the cakes so other shoppers
+can see and help them decide.
+* As a shopper, I want to be able to easily select the quantity of a cake or muffin when purchasing it so i can ensure I don't accidentally
+select tje wrong cake or quantity.
+* As a shopper, I want to be able to views the cakes in my bag to be purchased so i can identify the total cost of my purchase
+and all the cakes I will receive.
+* As a shopper, I want to be able to adjust the quantity of individual cakes in my basket so i easily make changes
+to my purchase before checkout.
+* As a shopper, I want to be able to easily ebter my payments information so i can checkout quickly and with no hazzles.
+* As a shopper, I want to be able to feek my personal and payment information is sage and secure so I can providedthe needed
+information ato make a purchase.
+* As a shopper, I want to be able to view and order confirmation after checkout so i can verify I haven't made any mistakes.
+* As a shopper, I want to be able to receive and email confirmation after checking out so i can keed the 
+confirmation of what I've purchase for my records.
+
+
+**Site Owner**
+
+**Site owner user stories:**
+
+As site owner I want the avility of adding any new cakes so I can expand the diversity of cakes choices the store can sell.
+
+Also I will like to be able to edit or update any cake so I can change the cake prices, description, images and other
+cakes criteria.
+
+The store owner would like the avility to delete a cake so they can remove an cake that they are no longer for sale.
+
+As the site owner, I want to be able to offer visitors free delivery based on a minimum amount ordered so that I can increase revenue and product sales via an incentive to the customer.
+
+As shop owner I would like the avility to edit or update a review or rate so I can edit or delete any reviews or rate
+ of any cake.
+
+
+
 
 ---
 
@@ -82,7 +151,10 @@ The Users Stories can be found [here](https://github.com/Dhracko/bakers_cake/blo
 
 ### Colours <a name="Colours"></a>
 
-* 
+* For the main colour i decided to use a mild lavender colour #D8C7FF
+* For the darker theme, hover buttons and banners I went for a darker purple rga(79, 45, 83)
+
+![Colour Theme](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/colortheme.png)
 
 
 ---
@@ -178,6 +250,16 @@ found under the items on the Shop page, or on the individual product page, and t
 ### Manual Testing
 
 You can view the testing done in the [test.md](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/test.md)
+
+### Automated Testing
+
+On top of the namual testing i created automated testing for the 3 main apps with a total of 15 testing, following the advice of the short section at The Code Institute.
+
+The code are included:
+* Products > tests.py: Product form testing and Product page view test
+* Checkout > tests.py: Order form testing
+* Contact > tests.py: Contact form testing
+
 
 ### Issues and resolutions <a name="Issues"></a>
  
