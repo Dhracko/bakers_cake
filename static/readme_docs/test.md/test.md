@@ -12,9 +12,7 @@ All code used for Bakers Cake was extensively tested through manual process duri
 
 1. [**Code Validation**](#code-validation)
 
-2. [**Testing Against User Stories**](#testing-against-user-stories)
-
-3. [**Manual Testing**](#manual-testing)
+2. [**Manual Testing**](#manual-testing)
     - [**Responsive Design Testing**](#responsive-design-testing)
         - [**Overview**](#overview)
             - [**Navbar**](#navbar)
@@ -29,8 +27,8 @@ All code used for Bakers Cake was extensively tested through manual process duri
             - [**404 Page**](#404-page)
             - [**500 Page**](#500-page)
 
-    - [**pylint**](#pylint)
-    - [**Lighthouse Chrome developer tools**](#Lighthouse-Chrome-developer-tools)
+3. [**pylint**](#pylint)
+4. [**Lighthouse Chrome developer tools**](#Lighthouse-Chrome-developer-tools)
 
 ## Code Validation
 
@@ -44,13 +42,6 @@ All code written has been thoroughly validated and passed through the following 
 
 - Python - All code was run through [PEP8](http://pep8online.com/).All code is PEP8 compliant.
 
-## Testing Against User Stories
-
-The below goes through of the user stores listed in the UX section of the [README.md](https://github.com/Dhracko/bakers_cake/blob/master/README.md).
-
-**As a user, I want:**
-
-1. 
 ## Manual Testing
 
 I have detailed the manual testing undertaken during the development stage to ensure that the design is responsive and free of bugs.
