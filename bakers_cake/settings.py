@@ -123,9 +123,6 @@ WSGI_APPLICATION = 'bakers_cake.wsgi.application'
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
-        'TEST': {
-            'NAME': 'mytestdatabase'
-        }
     }
 else:
     DATABASES = {
@@ -139,20 +136,19 @@ else:
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
-val = 'django.contrib.auth.password_validation'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'val.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'val.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'val.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'val.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 

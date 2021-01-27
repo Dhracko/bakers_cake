@@ -249,6 +249,7 @@ found under the items on the Shop page, or on the individual product page, and t
 
 ### Manual Testing
 
+I have extensibly tested the site manually, making sure all the links and features works.
 You can view the testing done in the [test.md](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/test.md)
 
 ### Automated Testing
@@ -263,7 +264,12 @@ The code are included:
 
 ### Issues and resolutions <a name="Issues"></a>
  
---- During the automated testing, i realised I set the postcode input value to "blank=True" but it's necesary for the card payment, to I changed to "False".
+* During the automated testing, i realised I set the postcode input value to "blank=True" but it's necesary for the card payment, to I changed to "False".
+* In order to make the automated testing works I had to temporally remove the remote database
+
+![DATABASE](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/database.png)
+
+--- 
 
 ## 10. Deployment <a name="Deployment"></a>
 Initial Deployment:
