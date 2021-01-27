@@ -167,8 +167,6 @@ Mockups of the website was made using [Balsamiq Wireframe](https://balsamiq.com/
 
 * [Desktop](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/desktop.png)
 
-* [Tablet](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/tablet.png)
-
 * [Mobile](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/mobile.png)
  
 ---
@@ -255,11 +253,11 @@ found under the items on the Shop page, or on the individual product page, and t
 ### Manual Testing
 
 I have extensively tested the site manually, making sure all the links and features works.
-You can view the testing done in the [test.md](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/test.md)
+You can view the testing done in the [test.md](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/testing/test.md)
 
 ### Testing against user Story
 
-For User story testing please refer to the [user_story_testing.md](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/user_story_testing.md.md)
+For User story testing please refer to the [user_story_testing.md](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/testing/user_story_testing.md.md)
 
 ### Automated Testing
 
