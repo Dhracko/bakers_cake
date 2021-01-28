@@ -1,4 +1,4 @@
-![Multi Device Image](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/multi_device.png)
+![Multi Device Image](static/readme_docs/multi_device.png)
 
 # Bakers Cake
 
@@ -7,7 +7,7 @@ My Milestone 4 project 'Bakers Cake' has been built using all my knowledge gaine
 
 Bakers Cake is a fully responsive, custom-built full-stack website, designed and built with the users wants and needs first, whilst maintaining a high design standard and ease of use.
 
-You can view the live website here. [Bakers Cake](#)
+You can view the live website here. [Bakers Cake](https://bakers-cake.herokuapp.com/)
 
 # Table of Content
 
@@ -156,7 +156,7 @@ As shop owner I would like the ability to edit or update a review or rate so I c
 * For the main colour I decided to use a mild lavender colour #D8C7FF
 * For the darker theme, hover buttons and banners I went for a darker purple rga(79, 45, 83)
 
-![Colour Theme](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/colortheme.png)
+![Colour Theme](static/readme_docs/colortheme.png)
 
 
 ---
@@ -165,13 +165,13 @@ As shop owner I would like the ability to edit or update a review or rate so I c
 Mockups of the website was made using [Balsamiq Wireframe](https://balsamiq.com/) to see how it would look for the different platforms like on large screens such as desktops and 
  on small screens such as a mobile phone:
 
-* [Desktop](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/desktop.png)
+* [Desktop](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Desktop.png)
 
-* [Mobile](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/mobile.png)
+* [Mobile](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Mobile.png)
  
 ---
 ### Other wireframes can be found here:
-* [Basket](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/basket.png)
+* [Basket](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Basket.png)
 * [Cake Page](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Cakes-Page.png)
 * [Checkout - Custome Info](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Checkout-Customer-Info.png)
 * [Checkout successful](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Checkout-Success.png)
@@ -237,19 +237,20 @@ found under the items on the Shop page, or on the individual product page, and t
 
 I created the schema in 6 different part after taking in consideration all de different parts of the website:
 
-user_profile: These are the details that the user saves to their profile for quick checkouts in the future. The username, email address and password details are set when the user registers for the site, and the delivery details are added when the user makes a purchase and selects to save those details to their profile.
+* user_profile: These are the details that the user saves to their profile for quick checkouts in the future. The username, email address and password details are set when the user registers for the site, and the delivery details are added when the user makes a purchase and selects to save those details to their profile.
 
-order: This includes the overall order in full, including the delivery details from (from or added to the user profile) and the order_line_items.
+* order: This includes the overall order in full, including the delivery details from (from or added to the user profile) and the order_line_items.
 
-order_line_items: This includes details of each product the user orders, the details of each product are linked to the products section.
+* order_line_items: This includes details of each product the user orders, the details of each product are linked to the products section.
 
-products: This includes all the information related to each product, including the product item price, SKU, image, name, descriptions, category and rating. Products can only be added by a Superuser/Authenticated user.
+* products: This includes all the information related to each product, including the product item price, SKU, image, name, descriptions, category and rating. Products can only be added by a Superuser/Authenticated user.
 
-category: Linking to the category field in the products section, the Category model simply holds the categories which are chosen in the product model. These categories are pre-set and can only be modified or added to by a Superuser/Authenticated user.
+* category: Linking to the category field in the products section, the Category model simply holds the categories which are chosen in the product model. These categories are pre-set and can only be modified or added to by a Superuser/Authenticated user.
 
-review: This will link to product. With this being linked to products so the review will only show on the product that is being linked to. Also a future feature where Admin can see the reviews done by a specific user. This can be added by any user but not modified.
+* review: This will link to product. With this being linked to products so the review will only show on the product that is being linked to. Also a future feature where Admin can see the reviews done by a specific user. This can be added by any user but not modified.
 
-The schema representation can be found [here](static/readme_docs/schema.png)
+The schema representation can be found ![schema](static/readme_docs/schema.png)
+
 ---
 
 ## 9. Technology Used <a name="Technology"></a>
@@ -262,6 +263,7 @@ The schema representation can be found [here](static/readme_docs/schema.png)
 * [GitHub](https://github.com/) - to host the repositories for this project and the live website preview.
 * [Balsamiq Wireframe](https://balsamiq.com/) - to create the Wireframes Mockups.
 * [Autoprefixer](https://autoprefixer.github.io/) - to parses your CSS and adds vendor prefixes.
+* [Amazon Web Services](https://aws.amazon.com/) - to storage the static files and the media files.
 
 ---
 
@@ -281,7 +283,7 @@ The schema representation can be found [here](static/readme_docs/schema.png)
 ### Manual Testing
 
 I have extensively tested the site manually, making sure all the links and features works.
-You can view the testing done in the [test.md](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/testing/test.md)
+You can view the testing done in the [test.md](static/readme_docs/testing/test.md)
 
 ### Testing against user Story
 
@@ -302,11 +304,13 @@ The code are included:
 * During the automated testing, I realised I set the postcode input value to "blank=True" but it's necessary for the card payment, to I changed to "False".
 * In order to make the automated testing works I had to temporally remove the remote database.
 
-![DATABASE](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/database.png)
+![DATABASE](static/readme_docs/database.png)
 
 --- 
 
 ## 11. Deployment <a name="Deployment"></a>
+
+Once I considered Bakers Cake was ready in a stable state to be deployed the project following process [here](static/readme_docs/deployment.md)
 
 
 ---
@@ -314,6 +318,8 @@ The code are included:
 ## 12. Credits <a name="Credits"></a>
 <a name="Content"></a>
 ### Content
+
+While some of the cakes images are of my own property, other have been optain from [Unsplash](https://unsplash.com/) invaluable site for royalty free images. 
 
 
 ## 13. Acknowledgements <a name="Acknowledgements"></a>
