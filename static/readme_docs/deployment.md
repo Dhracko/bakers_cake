@@ -43,13 +43,12 @@ to Sequel light.
 14. Create Procfile to tell Heroku to create a web dynamo, which will run unicorn and serve our
 Django app:
 
-15. Add this line of text to the Procfile: web: gunicorn bakers-cake.wsgi:application
+15. Add this line of text to the Procfile: web: gunicorn bakers_cake.wsgi:application
 
 16. Log into Heroku via the terminal with the command: heroku login -i
     * It will ask for email address and password.
 
-17. Temporarily disable collect static using the following command: heroku config:set
-DISABLE_COLLECTSTATIC=1 –app bakers-cake (--app bakers-cake must be added as I
+17. Temporarily disable collect static using the following command: heroku config:set DISABLE_COLLECTSTATIC=1 --app bakers-cake (--app bakers-cake must be added as I
 have more than 1 app in Heroku)
 
 18. In settings.py, update the ‘ALLOWED_HOSTS settings. ‘Localhost’ allows GitPod to still work
