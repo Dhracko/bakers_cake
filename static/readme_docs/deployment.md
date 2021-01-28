@@ -1,4 +1,4 @@
-## Deployment
+## Deployment - Full deployment
 
 ### Initial Deployment:
 
