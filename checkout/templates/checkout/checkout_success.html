@@ -59,7 +59,7 @@
                         <small class="text-muted">Order Details:</small>
                     </div>
                 </div>
-
+                <!-- Products Bought -->
                 {% for item in order.lineitems.all %}
                 <div class="row">
                     <div class="col-12 col-md-4">
@@ -79,7 +79,7 @@
                         <small class="text-muted">Delivering To:</small>
                     </div>
                 </div>
-
+                <!-- Address -->
                 <div class="row">
                     <div class="col-12 col-md-8 text-md-left text-dark-blue">
                         <p class="mb-0">{{ order.full_name }}</p>

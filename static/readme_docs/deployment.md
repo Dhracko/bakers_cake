@@ -85,7 +85,7 @@ static files.
     * Properties: Select static website hosting – enable.
     * Permissions: Cross-origin resource sharing (CORS). Add the code as per below provided by the course material for the Boutiqe Ado project.
 
-![policy](static/readme_docs/policy.png)
+![policy](policy.png)
 
    * Bucket Policy: select ‘Policy Generator’ to create a security policy for the bucket. Select the policy type: S3 Bucket Policy. Add * to Principal to allow all principals
 
@@ -134,7 +134,7 @@ in the list of recently visited services.
         * Add ‘storages’ to installed apps on settings.py
         * Next, add some code to tell Django which bucket it needs to communicate with, but only for Heroku. For this, I used an if statement:
 
-![Use aws](static/readme_docs/use_aws.png)
+![Use aws](use_aws.png)
     
 * Head to Heroku and add the new AWS keys to the config variables:
     * AWS_ACCESS_KEY_ID – (key found on the downloaded CSV document)
@@ -162,7 +162,7 @@ Now static files are done, it is time for the media files.
 * Add the code for # Cache Control to settings.py which tells the browser to cache the
 static files for a long time. This improves the user experience.
 
-![cache](static/readme_docs/cache.png)
+![cache](cache.png)
 
 <strong>Add media files to S3</strong>
 1. Back in AWS, create a new folder in the bucket called media
