@@ -1,6 +1,7 @@
 """Web request and returns a Web response for contact"""
 
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.template.loader import get_template
 from .forms import ContactForm
@@ -33,6 +34,8 @@ def contact(request):
                                  headers={'Reply-To': contact_email}
                                  )
             email.send()
+            messages.success(request, 'Thank you for contact us, We will reply to\
+                your query as soon as we can.')
             return redirect('home')
 
     return render(request, 'contact/contact.html', {'form': form_class, })

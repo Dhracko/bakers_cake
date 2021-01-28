@@ -170,6 +170,14 @@ Mockups of the website was made using [Balsamiq Wireframe](https://balsamiq.com/
 * [Mobile](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/mobile.png)
  
 ---
+### Other wireframes can be found here:
+* [Basket](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/basket.png)
+* [Cake Page](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Cakes-Page.png)
+* [Checkout - Custome Info](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Checkout-Customer-Info.png)
+* [Checkout successful](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Checkout-Success.png)
+* [Email confirmation](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Email-Confirmation.png)
+* [Product Page](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Product-Page.png)
+* [Modal Add to basket](https://github.com/Dhracko/bakers_cake/blob/master/static/readme_docs/wireframes/Product-Page-Add-Basket.png)
 
 ---
 
@@ -221,10 +229,30 @@ found under the items on the Shop page, or on the individual product page, and t
 
 * Other register users can click on like or dislike a review left from other users.
 * A posibility of collection instead of delivery.
+* Admin can select to see only reviews done by a specific user.
 
 ---
 
-## 8. Technology Used <a name="Technology"></a>
+## 8. Schema Design
+
+I created the schema in 6 different part after taking in consideration all de different parts of the website:
+
+user_profile: These are the details that the user saves to their profile for quick checkouts in the future. The username, email address and password details are set when the user registers for the site, and the delivery details are added when the user makes a purchase and selects to save those details to their profile.
+
+order: This includes the overall order in full, including the delivery details from (from or added to the user profile) and the order_line_items.
+
+order_line_items: This includes details of each product the user orders, the details of each product are linked to the products section.
+
+products: This includes all the information related to each product, including the product item price, SKU, image, name, descriptions, category and rating. Products can only be added by a Superuser/Authenticated user.
+
+category: Linking to the category field in the products section, the Category model simply holds the categories which are chosen in the product model. These categories are pre-set and can only be modified or added to by a Superuser/Authenticated user.
+
+review: This will link to product. With this being linked to products so the review will only show on the product that is being linked to. Also a future feature where Admin can see the reviews done by a specific user. This can be added by any user but not modified.
+
+The schema representation can be found [here](static/readme_docs/schema.png)
+---
+
+## 9. Technology Used <a name="Technology"></a>
 
 * HTML & CSS programming languages
 * [Bootstrap](https://getbootstrap.com/) - to easily adapt the website to be responsive for all users. Version 4.4.1
@@ -237,7 +265,7 @@ found under the items on the Shop page, or on the individual product page, and t
 
 ---
 
-## 9. Testing <a name="Testing"></a>
+## 10. Testing <a name="Testing"></a>
 
 ### Code Validation
 
@@ -278,22 +306,22 @@ The code are included:
 
 --- 
 
-## 10. Deployment <a name="Deployment"></a>
+## 11. Deployment <a name="Deployment"></a>
 
 
 ---
 
-## 11. Credits <a name="Credits"></a>
+## 12. Credits <a name="Credits"></a>
 <a name="Content"></a>
 ### Content
 
 
-## 12. Acknowledgements <a name="Acknowledgements"></a>
+## 13. Acknowledgements <a name="Acknowledgements"></a>
 * I would like to thank Rohit Sharma (my mentor) for his invaluable feedback, help and advice.
 * To the Tutor Stephen & Alan at Code Institute for showing the patient when I have got stuck with some code.
 * I would like to thank to [Tony Teaches Tech](https://www.youtube.com/channel/UCWPJwoVXJhv0-ucr3pUs1dA) and his video. 
 [How to Pass Values Between HTML Pages Using Django Forms](https://www.youtube.com/watch?v=vmP1r6xiJog&t=442s) which helped me to understand django and html relations.
 
 
-## 13. Disclaimer <a name="Disclaimer"></a>
+## 14. Disclaimer <a name="Disclaimer"></a>
 Please note the content and images on this website are for educational purposes only.
