@@ -210,6 +210,12 @@ equal to 99.
 
 - No issues were discovered.
 
+##### Edit / Delete Cake (Under Product Management)
+
+- I tested the different input from the form  and all are working as intended.
+
+    * Issue found: As removing the image of a product already created, it didn't record to use the noimange.png instead.
+
 ##### Review Page
 - I tested to ensure that the form content displayed and adjusted appropriately to the user and the media screen size they were viewing the page on.
 

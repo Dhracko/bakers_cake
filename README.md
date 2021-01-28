@@ -312,7 +312,37 @@ The code are included:
 
 Once I considered Bakers Cake was ready in a stable state to be deployed the project following process [here](static/readme_docs/deployment.md)
 
+For local deployment:
 
+1. I went to the repositories [Bakers Cake](https://github.com/Dhracko/bakers_cake).
+2. on the top right click at Settings.
+3. Scroll down until the section GitHub Pages.
+4. Within that section there is a scrolldown option in "Source" and select "master branch".
+5. Once the page has refreshed, scroll down again to GitHub Pages and a new link should have appeared with the link: https://dhracko.github.io/bakers_cake/.
+
+To run the project locally:
+
+1. Go to the repositories [Bakers Cake](https://github.com/Dhracko/bakers_cake).
+2. Click on the green button that says "Clone or download".
+
+3. To clone the repository using HTTPS, under "Clone with HTTPS", click . To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click .
+4. Open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+
+6. Type git clone, and then paste the URL you copied in Step 2.
+
+> $ git clone https://github.com/Dhracko/bakers_cake
+
+7. Press Enter. Your local clone will be created.
+
+8. On Gitpod Environment Variables you need to have the following Variables:
+    * SECRET_KEY
+    * STRIPE_PUBLIC_KEY
+    * STRIPE_SECRET_KEY
+    * STRIP_WH_SECRET
+    * DEVELOPMENT
+
+Further information on how to clone a repository can be found [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 ---
 
 ## 12. Credits <a name="Credits"></a>
